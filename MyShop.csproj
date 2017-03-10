@@ -1,0 +1,250 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{FA592127-E26E-466D-835A-FE8A241ABBA4}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MyShop</RootNamespace>
+    <AssemblyName>MyShop</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Basket.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Basket.Designer.cs">
+      <DependentUpon>Basket.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inquiry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inquiry.Designer.cs">
+      <DependentUpon>Inquiry.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Letter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Letter.Designer.cs">
+      <DependentUpon>Letter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entrance.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Entrance.Designer.cs">
+      <DependentUpon>Entrance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Headpiece.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Headpiece.Designer.cs">
+      <DependentUpon>Headpiece.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainShop.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainShop.Designer.cs">
+      <DependentUpon>MainShop.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Regestration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Regestration.Designer.cs">
+      <DependentUpon>Regestration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sort.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sort.Designer.cs">
+      <DependentUpon>Sort.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UsersDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UsersDataSet.xsd</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Basket.resx">
+      <DependentUpon>Basket.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inquiry.resx">
+      <DependentUpon>Inquiry.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Letter.resx">
+      <DependentUpon>Letter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Entrance.resx">
+      <DependentUpon>Entrance.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Headpiece.resx">
+      <DependentUpon>Headpiece.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainShop.resx">
+      <DependentUpon>MainShop.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Regestration.resx">
+      <DependentUpon>Regestration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sort.resx">
+      <DependentUpon>Sort.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="Resources\Help.docx" />
+    <None Include="UsersDataSet.xsc">
+      <DependentUpon>UsersDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="UsersDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>UsersDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="UsersDataSet.xss">
+      <DependentUpon>UsersDataSet.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\e9172ad9f2bc7ad2c0967090ec1b254e_1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logotype-damskoe-schastie-425-2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\HelpShop.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\parol.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\jj_futbolka_09_216x104.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\jj_futbolka_09_216x1041.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\jordan__ultra__fly_190x207.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\204633_1_190x207.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1100_14x187_big__2000x2000_190x207.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\OO001EWLXC74_1_v1_190x207.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1_190x207.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Shop.mdb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="Microsoft.Office.Core">
+      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>7</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Interop.Excel">
+      <Guid>{00020813-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>8</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Interop.Word">
+      <Guid>{00020905-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>8</VersionMajor>
+      <VersionMinor>6</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="VBIDE">
+      <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
