@@ -34,15 +34,13 @@ namespace MyShop
             }
             else
             {
-                string conStr = @"Data Source=DESKTOP-EBHRT5L; Initial Catalog=Users; Integrated Security=True;"; // создание строки подключения
-                try
-                {
+                string conStr = @"Data Source=DESKTOP-EBHRT5L; Initial Catalog=Users; Integrated Security=True;"; // создание строки подключения  
                     using (SqlConnection con = new SqlConnection(conStr))
                     {
                         SqlDataAdapter sda = new SqlDataAdapter("Select Count(*) From ShopUsers where UsersLogin='" + regLogin.Text + "'", con);
                         DataTable dt = new DataTable();
                         sda.Fill(dt);
-                        if (dt.Rows[0].ToString() != "0")
+                        if (dt.Rows[0].ToString() == "1")
                         {
                             con.Open();
                             MessageBox.Show("Такой пользователь уже существует!");
@@ -71,11 +69,6 @@ namespace MyShop
 
                     }
                 }
-                catch (Exception myExep)
-                {
-
-                    MessageBox.Show(myExep.Message);
-                }
               
             }
 
@@ -85,4 +78,3 @@ namespace MyShop
 
         }
     }
-}
