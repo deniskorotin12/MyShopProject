@@ -64,6 +64,7 @@
             this.regPassword.Location = new System.Drawing.Point(51, 188);
             this.regPassword.Multiline = true;
             this.regPassword.Name = "regPassword";
+            this.regPassword.PasswordChar = '*';
             this.regPassword.Size = new System.Drawing.Size(288, 32);
             this.regPassword.TabIndex = 1;
             // 
@@ -72,6 +73,7 @@
             this.regRepPassword.Location = new System.Drawing.Point(51, 273);
             this.regRepPassword.Multiline = true;
             this.regRepPassword.Name = "regRepPassword";
+            this.regRepPassword.PasswordChar = '*';
             this.regRepPassword.Size = new System.Drawing.Size(288, 34);
             this.regRepPassword.TabIndex = 2;
             // 

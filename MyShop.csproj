@@ -52,6 +52,30 @@
     <Compile Include="Basket.Designer.cs">
       <DependentUpon>Basket.cs</DependentUpon>
     </Compile>
+    <Compile Include="Footwear.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Footwear.Designer.cs">
+      <DependentUpon>Footwear.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ForKids.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ForKids.Designer.cs">
+      <DependentUpon>ForKids.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ForMens.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ForMens.Designer.cs">
+      <DependentUpon>ForMens.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ForWooman.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ForWooman.Designer.cs">
+      <DependentUpon>ForWooman.cs</DependentUpon>
+    </Compile>
     <Compile Include="Inquiry.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -76,11 +100,23 @@
     <Compile Include="Headpiece.Designer.cs">
       <DependentUpon>Headpiece.cs</DependentUpon>
     </Compile>
+    <Compile Include="MainMenuShop.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainMenuShop.Designer.cs">
+      <DependentUpon>MainMenuShop.cs</DependentUpon>
+    </Compile>
     <Compile Include="MainShop.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="MainShop.Designer.cs">
       <DependentUpon>MainShop.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Outerwear.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Outerwear.Designer.cs">
+      <DependentUpon>Outerwear.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -96,6 +132,12 @@
     <Compile Include="Sort.Designer.cs">
       <DependentUpon>Sort.cs</DependentUpon>
     </Compile>
+    <Compile Include="Underwear.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Underwear.Designer.cs">
+      <DependentUpon>Underwear.cs</DependentUpon>
+    </Compile>
     <Compile Include="UsersDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -103,6 +145,18 @@
     </Compile>
     <EmbeddedResource Include="Basket.resx">
       <DependentUpon>Basket.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Footwear.resx">
+      <DependentUpon>Footwear.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ForKids.resx">
+      <DependentUpon>ForKids.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ForMens.resx">
+      <DependentUpon>ForMens.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ForWooman.resx">
+      <DependentUpon>ForWooman.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Inquiry.resx">
       <DependentUpon>Inquiry.cs</DependentUpon>
@@ -116,8 +170,14 @@
     <EmbeddedResource Include="Headpiece.resx">
       <DependentUpon>Headpiece.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="MainMenuShop.resx">
+      <DependentUpon>MainMenuShop.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MainShop.resx">
       <DependentUpon>MainShop.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Outerwear.resx">
+      <DependentUpon>Outerwear.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -135,6 +195,9 @@
     <EmbeddedResource Include="Sort.resx">
       <DependentUpon>Sort.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Underwear.resx">
+      <DependentUpon>Underwear.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -144,6 +207,7 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="Resources\CHMHelp.chm" />
     <None Include="Resources\Help.docx" />
     <None Include="UsersDataSet.xsc">
       <DependentUpon>UsersDataSet.xsd</DependentUpon>

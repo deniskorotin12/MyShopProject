@@ -26,10 +26,10 @@ namespace MyShop
         {
             if (myLetter.Text == "" || myTelephone.Text == "(   )    -")
             {
-                MessageBox.Show("Incorrect information, please check your input data!");
+                MessageBox.Show("Один из полей не заполнены!");
             }
             else{ 
-            MessageBox.Show("Your letter will be send!");
+            MessageBox.Show("Ваше письмо отправлено");
             Close();
             }
         }

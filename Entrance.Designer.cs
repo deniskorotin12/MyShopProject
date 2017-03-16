@@ -39,9 +39,8 @@
             this.PasswordText = new System.Windows.Forms.TextBox();
             this.LoginText = new System.Windows.Forms.TextBox();
             this.LoginLabel = new System.Windows.Forms.Label();
-            this.PasswordLabel = new System.Windows.Forms.Label();
-            this.Regestration = new System.Windows.Forms.Button();
             this.Close = new System.Windows.Forms.Button();
+            this.PasswordLabel = new System.Windows.Forms.Label();
             this.LabelPassword = new System.Windows.Forms.Label();
             this.LabelLogin = new System.Windows.Forms.Label();
             this.Login = new System.Windows.Forms.TextBox();
@@ -50,6 +49,8 @@
             this.EnterButton = new System.Windows.Forms.Button();
             this.groupAutorization = new System.Windows.Forms.GroupBox();
             this.btnAccess = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.usersDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.shopUsersBindingSource)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -93,6 +94,7 @@
             this.groupBox1.Controls.Add(this.PasswordText);
             this.groupBox1.Controls.Add(this.LoginText);
             this.groupBox1.Controls.Add(this.LoginLabel);
+            this.groupBox1.Controls.Add(this.Close);
             this.groupBox1.Controls.Add(this.PasswordLabel);
             this.groupBox1.Location = new System.Drawing.Point(12, 148);
             this.groupBox1.Name = "groupBox1";
@@ -104,9 +106,9 @@
             // 
             this.Enter.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Enter.Font = new System.Drawing.Font("Modern No. 20", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Enter.Location = new System.Drawing.Point(163, 197);
+            this.Enter.Location = new System.Drawing.Point(56, 214);
             this.Enter.Name = "Enter";
-            this.Enter.Size = new System.Drawing.Size(172, 72);
+            this.Enter.Size = new System.Drawing.Size(129, 55);
             this.Enter.TabIndex = 3;
             this.Enter.Text = "Enter";
             this.Enter.UseVisualStyleBackColor = true;
@@ -136,6 +138,19 @@
             this.LoginLabel.Size = new System.Drawing.Size(70, 25);
             this.LoginLabel.TabIndex = 1;
             this.LoginLabel.Text = "Login";
+            this.LoginLabel.Click += new System.EventHandler(this.LoginLabel_Click);
+            // 
+            // Close
+            // 
+            this.Close.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Close.Font = new System.Drawing.Font("Modern No. 20", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Close.Location = new System.Drawing.Point(278, 214);
+            this.Close.Name = "Close";
+            this.Close.Size = new System.Drawing.Size(129, 55);
+            this.Close.TabIndex = 4;
+            this.Close.Text = "Close";
+            this.Close.UseVisualStyleBackColor = true;
+            this.Close.Click += new System.EventHandler(this.button2_Click);
             // 
             // PasswordLabel
             // 
@@ -146,29 +161,6 @@
             this.PasswordLabel.Size = new System.Drawing.Size(103, 25);
             this.PasswordLabel.TabIndex = 2;
             this.PasswordLabel.Text = "Password";
-            // 
-            // Regestration
-            // 
-            this.Regestration.Font = new System.Drawing.Font("Modern No. 20", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Regestration.Location = new System.Drawing.Point(24, 456);
-            this.Regestration.Name = "Regestration";
-            this.Regestration.Size = new System.Drawing.Size(129, 55);
-            this.Regestration.TabIndex = 5;
-            this.Regestration.Text = "Regestration";
-            this.Regestration.UseVisualStyleBackColor = true;
-            this.Regestration.Click += new System.EventHandler(this.Regestration_Click_1);
-            // 
-            // Close
-            // 
-            this.Close.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Close.Font = new System.Drawing.Font("Modern No. 20", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Close.Location = new System.Drawing.Point(344, 456);
-            this.Close.Name = "Close";
-            this.Close.Size = new System.Drawing.Size(129, 55);
-            this.Close.TabIndex = 4;
-            this.Close.Text = "Close";
-            this.Close.UseVisualStyleBackColor = true;
-            this.Close.Click += new System.EventHandler(this.button2_Click);
             // 
             // LabelPassword
             // 
@@ -244,13 +236,38 @@
             // 
             // btnAccess
             // 
-            this.btnAccess.Location = new System.Drawing.Point(175, 456);
+            this.btnAccess.Location = new System.Drawing.Point(150, 8);
             this.btnAccess.Name = "btnAccess";
-            this.btnAccess.Size = new System.Drawing.Size(151, 55);
+            this.btnAccess.Size = new System.Drawing.Size(174, 42);
             this.btnAccess.TabIndex = 6;
             this.btnAccess.Text = "Файловый сервер";
             this.btnAccess.UseVisualStyleBackColor = true;
             this.btnAccess.Click += new System.EventHandler(this.button1_Click_1);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Modern No. 20", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(184, 462);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(108, 17);
+            this.label1.TabIndex = 7;
+            this.label1.Text = "New to VIKKI ?";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label2.Font = new System.Drawing.Font("Modern No. 20", 9F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.label2.Location = new System.Drawing.Point(184, 479);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(123, 17);
+            this.label2.TabIndex = 7;
+            this.label2.Text = "Create an account. ";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // Entrance
             // 
@@ -259,12 +276,12 @@
             this.BackColor = System.Drawing.SystemColors.Control;
             this.BackgroundImage = global::MyShop.Properties.Resources._2;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.ClientSize = new System.Drawing.Size(500, 568);
+            this.ClientSize = new System.Drawing.Size(463, 561);
             this.ControlBox = false;
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.btnAccess);
-            this.Controls.Add(this.Regestration);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.Close);
             this.Controls.Add(this.groupAutorization);
             this.Controls.Add(this.LabelAutorization);
             this.DoubleBuffered = true;
@@ -294,11 +311,10 @@
         private UsersDataSetTableAdapters.ShopUsersTableAdapter shopUsersTableAdapter;
         private UsersDataSetTableAdapters.TableAdapterManager tableAdapterManager;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Button Regestration;
         private System.Windows.Forms.Button Enter;
         private System.Windows.Forms.Button Close;
-        private System.Windows.Forms.TextBox PasswordText;
-        private System.Windows.Forms.TextBox LoginText;
+        public System.Windows.Forms.TextBox PasswordText;
+        public System.Windows.Forms.TextBox LoginText;
         private System.Windows.Forms.Label LoginLabel;
         private System.Windows.Forms.Label PasswordLabel;
         private System.Windows.Forms.Label LabelPassword;
@@ -309,6 +325,8 @@
         private System.Windows.Forms.Button EnterButton;
         private System.Windows.Forms.GroupBox groupAutorization;
         private System.Windows.Forms.Button btnAccess;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
 
         public string login{ get; set; }
     }

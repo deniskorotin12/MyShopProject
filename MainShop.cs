@@ -46,11 +46,13 @@ namespace MyShop
 
         private void helpToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            string commandText = @"C:\Users\Denis Korotin\Desktop\Shop\MyShop\MyShop\bin\Debug\Help.docx";
+            string commandText = @"C:\Users\Denis Korotin\Desktop\Shop\MyShop\MyShop\Resources\CHMHelp.chm";
             var proc = new Process();
             proc.StartInfo.FileName = commandText;
             proc.StartInfo.UseShellExecute = true;
             proc.Start();
+            //Help.ShowHelp(this, "CHMHelp.chm");
+
         }
 
         private void button1_Click_1(object sender, EventArgs e)

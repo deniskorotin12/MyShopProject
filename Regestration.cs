@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.OleDb;
 using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
@@ -34,47 +35,49 @@ namespace MyShop
             }
             else
             {
-                string conStr = @"Data Source=DESKTOP-EBHRT5L; Initial Catalog=Users; Integrated Security=True;"; // создание строки подключения  
-                    using (SqlConnection con = new SqlConnection(conStr))
+                string conStr = @"Data Source=DESKTOP-EBHRT5L; Initial Catalog=Users; Integrated Security=True;";
+                using (SqlConnection con = new SqlConnection(conStr))
+                {
+                    SqlDataAdapter sda = new SqlDataAdapter("Select Count(*) From ShopUsers where UsersLogin = '" + regLogin.Text + "'and UsersPassword = '" + regPassword.Text + "'", con);
+                    DataTable dt = new DataTable();
+                    sda.Fill(dt);
+                    if (dt.Rows[0][0].ToString() == "1")
                     {
-                        SqlDataAdapter sda = new SqlDataAdapter("Select Count(*) From ShopUsers where UsersLogin='" + regLogin.Text + "'", con);
-                        DataTable dt = new DataTable();
-                        sda.Fill(dt);
-                        if (dt.Rows[0].ToString() == "1")
+                        con.Open();
+                        MessageBox.Show("Такой пользователь уже существует!");
+                        con.Close();
+                    }
+                    else
+                    {
+                        try
                         {
+                            string sql = string.Format("INSERT Into ShopUsers (UsersLogin, UsersPassword) VALUES ('{0}','{1}')", myRegLogin, myRegPassword);
+                            SqlCommand cmd = new SqlCommand(sql, con);
+                            cmd.CommandType = CommandType.Text;
                             con.Open();
-                            MessageBox.Show("Такой пользователь уже существует!");
+                            cmd.ExecuteNonQuery();
                             con.Close();
+                            MessageBox.Show("Спасибо за регистрацию!");
+
+
+                           // LoginText.Text = regLogin.Text;
+                           //.PasswordText.Text = regPassword.Text;
+                            Close();
+                          
                         }
-                        else
+                        catch (Exception ex)
                         {
-                            try
-                            {
-                                string sql = string.Format("INSERT Into ShopUsers (UsersLogin, UsersPassword) VALUES ('{0}','{1}')", myRegLogin, myRegPassword);
-                                SqlCommand cmd = new SqlCommand(sql, con);
-                                cmd.CommandType = CommandType.Text;
-                                con.Open();
-                                cmd.ExecuteNonQuery();
-                                con.Close();
-                                MessageBox.Show("Спасибо за регистрацию!");
-                                Close();
-                            }
-                            catch (Exception ex)
-                            {
-                                MessageBox.Show(ex.Message);
-                            }
+                            MessageBox.Show(ex.Message);
                         }
-
-
 
                     }
+
+
+
                 }
-              
             }
 
-
-
-
-
         }
+
     }
+}

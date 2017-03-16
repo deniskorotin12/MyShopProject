@@ -37,13 +37,13 @@ namespace MyShop
                     con.Open();
                     MessageBox.Show("Добро пожаловать в магазин!");
                     login = LoginText.Text;
-                    MainShop mainshop = new MainShop();
+                    MainMenuShop mainmenushop = new MainMenuShop();
                     Hide();
                     con.Close();
-                    mainshop.ShowDialog();
+                    mainmenushop.ShowDialog();
                     Show();
-
                 }
+
                 catch (Exception exception)
                 {
                     MessageBox.Show(exception.Message);
@@ -51,7 +51,7 @@ namespace MyShop
             }
             else
             {
-                MessageBox.Show("Такого пользователя не существует");
+                MessageBox.Show("Неправильно введены данные");
             }
         }
 
@@ -74,20 +74,9 @@ namespace MyShop
 
         }
 
-        private void Regestration_Click(object sender, EventArgs e)
-        {
-            Regestration regestration = new Regestration();
-            regestration.ShowDialog();
-            Hide();
-            Show();
-        }
-
         private void Regestration_Click_1(object sender, EventArgs e)
         {
-            Regestration regestration = new Regestration();
-            regestration.ShowDialog();
-            Hide();
-            Show();
+
         }
         private void button1_Click_1(object sender, EventArgs e)
         {
@@ -105,6 +94,20 @@ namespace MyShop
                 MessageBox.Show(_ex.Message);
             }
 
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+            Regestration regestration = new Regestration();
+            regestration.ShowDialog();
+            Hide();
+            Show();
+        }
+
+        private void LoginLabel_Click(object sender, EventArgs e)
+        {
+            LoginText.Text = "admin";
+            PasswordText.Text = "PasswordForAdmin";
         }
     }
 }

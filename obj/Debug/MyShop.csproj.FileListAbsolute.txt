@@ -16,3 +16,10 @@ C:\Users\Denis Korotin\Desktop\Shop\MyShop\MyShop\obj\Debug\MyShop.Inquiry.resou
 C:\Users\Denis Korotin\Desktop\Shop\MyShop\MyShop\obj\Debug\MyShop.Basket.resources
 C:\Users\Denis Korotin\Desktop\Shop\MyShop\MyShop\bin\Debug\Resources\Shop.mdb
 C:\Users\Denis Korotin\Desktop\Shop\MyShop\MyShop\obj\Debug\MyShop.csproj.ResolveComReference.cache
+C:\Users\Denis Korotin\Desktop\Shop\MyShop\MyShop\obj\Debug\MyShop.ForMens.resources
+C:\Users\Denis Korotin\Desktop\Shop\MyShop\MyShop\obj\Debug\MyShop.MainMenuShop.resources
+C:\Users\Denis Korotin\Desktop\Shop\MyShop\MyShop\obj\Debug\MyShop.ForKids.resources
+C:\Users\Denis Korotin\Desktop\Shop\MyShop\MyShop\obj\Debug\MyShop.ForWooman.resources
+C:\Users\Denis Korotin\Desktop\Shop\MyShop\MyShop\obj\Debug\MyShop.Footwear.resources
+C:\Users\Denis Korotin\Desktop\Shop\MyShop\MyShop\obj\Debug\MyShop.Outerwear.resources
+C:\Users\Denis Korotin\Desktop\Shop\MyShop\MyShop\obj\Debug\MyShop.Underwear.resources
